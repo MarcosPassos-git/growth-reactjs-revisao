@@ -18,12 +18,8 @@ export default function HomePage() {
       console.log({email, password})
     }
 
-    
-    const handleChangeInput = (event) => {
-      setEmail(event.target.value)      
-    }
-
-    const handleChangeInputPassword = (event, onChange) => {
+   
+    const handleChangeInput = (event, onChange) => {
       onChange(event.target.value)      
     }
 
@@ -36,9 +32,9 @@ export default function HomePage() {
         <Input type="text" placeholder="Digite seu email" onChange={(e) => handleChangeInput(e, setEmail)}/>
         <Input type="password" placeholder="Digite sua senha" onChange={(e) => handleChangeInput(e, setPassword)}/>
         <p>O email digitado foi: {email}</p>
-        <Button type="submit">Botão</Button>
+        <Button type="submit">Botão dentro do form</Button>
       </form>
-      <Button>Botão</Button>
+      <Button onClick={handleLabelClick}>Botão fora</Button>
       
       <label>LABEL TESTE</label>
     </>
